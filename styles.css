@@ -5,39 +5,25 @@
 }
 
 :root {
-    --first-color: white;
-    --second-color: #ccff00;
-    --third-color: black;
-    --fourth-color: #3FD2C7;
-    --background-color: #590d20;
-    --first-font: 'Julius Sans One', sans-serif;
-    --second-font: 'Jaldi', sans-serif;
+    --first-color: #5b4945;
+    --second-color: #FC4001;
+    --first-font: 'Poppins', sans-serif;
     
 }
 
 html {
     scroll-behavior: smooth;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+
 }
  
 body {
-    height: 450vh;
-    width: 100vw;
-    overflow-x: hidden;
-    
+    height:100%;
 }
 
-/*
-.overlay {
-	position: absolute;
-	left: 0;
-	right: 0;
-    top: 0;
-	height: 450vh;
-	background: linear-gradient(rgba(255,255,255,0), white 80%);
-    z-index: 0;
-}
-
-*/
+/*--Navbar-- */
 
 .navbar {
     position: fixed;
@@ -63,25 +49,21 @@ body {
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 3rem;
+    gap: 2.5rem;
     justify-content: right;
     margin-right: 3rem;
 }
   
 .links li a {
     text-decoration: none;
-    color: var(--second-color);
+    color: var(--first-color);
     font-size: 0.9em;
-    font-family: var(--second-font);
-    letter-spacing: 0.2rem;
+    font-family: var(--first-font);
+    letter-spacing: 0.1rem;
     writing-mode: vertical-lr;
 }
 
-.links li a:hover {
-    color:var(--second-color);
-}
-
-#social-icons i:hover {
+.links li a:hover, #social-icons i:hover {
     color:var(--second-color);
 }
 
@@ -89,7 +71,7 @@ body {
     display: none;
     animation: 0.4s ease-in-out fadeIn forwards;
     position: absolute;
-    height: 100vh;
+    height: 95vh;
     top: 0;
     bottom: 0;
     right: 0;
@@ -104,7 +86,6 @@ body {
     }
 }
 
-
 #social-media {
     position: absolute;
     background-color: transparent;
@@ -117,7 +98,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.4rem;
 }
 
 #social-icons i {
@@ -125,33 +106,31 @@ body {
     color: var(--first-color);
 }
 
-
-
+/*--hero--*/
 
 #welcome-section {
     height: 100vh;
-    width: 100%;
-    display: inline-block;
-    overflow: hidden;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    flex-direction: row;
+}
 
+#empty {
+  width: 10%;
 }
 
 #name {
     z-index: 1;
     background-color: transparent;
     position: relative;
-    width: 10.3em;
     color: var(--first-color);
     font-size: 4rem;
     font-family: var(--first-font);
-    margin-left: 7rem;
+    margin: 0;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid var(--first-color);
+    font-weight: 700;
 }
 
 .name-typewriter{
@@ -174,7 +153,7 @@ body {
 
 @keyframes typewriter{
     from{width: 0;}
-    to{width: 10.3em;}
+    to{width: 10.2em;}
 }
 
 @keyframes blinkTextCursor{
@@ -186,200 +165,217 @@ body {
     z-index: 1;
     background-color: transparent;
     position: relative;
-    width: 10.5em;
-    color: var(--first-color);
+    width: 12.8em;
+    color: var(--second-color);
     font-size: 1rem;
-    font-family: var(--second-font);
+    font-family: var(--first-font);
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid var(--first-color);
-    margin-left: 37.3rem;
     letter-spacing: 0.1rem;
 }
 
 .devop-typewriter{
     animation: appear 4s,
                typewriter-d 2s steps(20) 3.5s 1 normal both,
-               blinkTextCursor 500ms steps(20) 3.5s infinite normal,
+               blinkTextCursor-d 500ms steps(20) 3.5s infinite normal,
                desappear 99999999s 8s;
 }
   
 @keyframes typewriter-d{
     from{width: 0;}
-    to{width: 10.5em;}
+    to{width: 12.8em;}
 }
 
+
+@keyframes blinkTextCursor-d{
+  from{border-right-color: var(--second-color);}
+  to{border-right-color: transparent;}
+}
 
 #renata-img {
     object-fit: cover;
     height: 100%;
     width: 110%;
     mix-blend-mode: multiply;   
-    filter: contrast(40%);
+    filter:opacity(30%);
     position: fixed;
 }
 
+svg {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+
+/*About me*/
+
 hr {
-    position: relative;
+    display: none;
+    margin: 3px auto;
     border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), var(--first-color), var(--first-color), var(--first-color),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    height: 1.5px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0), var(--second-color), var(--second-color), var(--second-color),rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 #about-me {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     z-index: 1;   
     position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
 }
 
 h1 {
-    margin-top: 4rem;
     font-family: var(--first-font);
     color: var(--second-color);
-    text-align: center;
+    text-align: left;
+    font-size: 2rem;
+    margin: 8rem 0 6rem 2rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    width: 100%;
 }
 
-#about-timeline {
-    align-items: left;
-    margin-left: 7rem;
-    position: relative;
-    margin-top: 4rem;
-   }
 
-.section{
-    position: relative;
-    width: 60%;
-    display: block;
-  }
+
   
 [type="radio"]:checked,
 [type="radio"]:not(:checked){
-    position: absolute;
+    position: relative;
     left: -9999px;
 }
 
 .checkbox:checked + label,
 .checkbox:not(:checked) + label{
-    position: relative;
-    cursor: pointer;
-    margin: 0 auto;
-    text-align: center;
-    margin-right: 6px;
-    margin-left: 6px;
-    display: inline-block;
-    width: 0.7rem;
-    height: 0.7rem;
-    box-sizing: border-box;
-    background-color: var(--third-color);
-    border-radius: 50%;
-  }
+  cursor: pointer;
+  margin-right: 6px;
+  margin-left: 6px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: var(--first-color);
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
   
-  
-  .checkbox:checked + label{
+.checkbox:checked + label{
+    box-shadow: 0 8px 25px 0 rgba(16,39,112,.3);
     transform: scale(1.3);
     background-color: var(--second-color);
-  }
+}
   
-  .slider-height-padding {
-    padding-top: 23rem;
-  }
-  
-  #slide {
+.slider-height-padding {
+    padding-top: 32rem;
+    padding-left: 29rem;
+}
+
+#slide {
     position: absolute;
     top: 0;
-    left: 0;
     display: block;
-    width: 90%;
+    width: 100%;
     z-index: 100;
     padding: 0;
     margin: 0;
     list-style: none;
+    
   }
 
+  
   #slide li {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
+    top: 0rem;
+    left: -150%;
+    width: 100%;
     display: block;
     z-index: 1;
-    padding: 2rem;
     list-style: none;
-    height: 21rem;
-    border: 1px solid var(--third-color);
-    border-radius: 20%;
     box-sizing: border-box;
-    font-size: 1em;
+    font-size: 1.3em;
     letter-spacing: 2px;
-    opacity: 0;
     pointer-events: none;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    line-height: 2rem;
-    text-align: justify;
+    line-height: 3rem;
+    text-align: center;
   }
-  
 
   #slide li span {
-    mix-blend-mode: difference;
-    font-size: 1.5em;
     color: var(--second-color);
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    margin-right: 4rem;
-  }
-
-  #slide li p {
-    margin-bottom: 1rem;
-    color: var(--third-color);
-    margin-right: 4rem;
+    font-family: var(--first-font);
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
   
+  #slide li p {
+    color: var(--first-color);
+    font-size: 2em;
+    font-family: var(--first-font);
+    font-weight: 600;
+    width: 65%;
+  }
   
   .checkbox.frst:checked ~ #slide li:nth-child(1) {
-    opacity: 1;
     pointer-events: auto;
-    border-radius: 16px;
+    left: -35rem;
+    top: 16rem;
   }
   .checkbox.scnd:checked ~ #slide li:nth-child(2) {
-    opacity: 1;
+    border-radius: 0 5px 5px 0;
     pointer-events: auto;
-    border-radius: 16px;
+    left: -35rem;
+    top: 10rem;
   }
   .checkbox.thrd:checked ~ #slide li:nth-child(3) {
-    opacity: 1;
+    border-radius: 0 5px 5px 0;
     pointer-events: auto;
-    border-radius: 16px;
+    left: -35rem;
+    top: 10rem;
   }
   .checkbox.foth:checked ~ #slide li:nth-child(4) {
-    opacity: 1;
+    border-radius: 0 5px 5px 0;
     pointer-events: auto;
-    border-radius: 16px;
+    left: -35rem;
+    top: 10rem;
   }
   
   .checkbox.fith:checked ~ #slide li:nth-child(5) {
-    opacity: 1;
+    border-radius: 0 5px 5px 0;
     pointer-events: auto;
-    border-radius: 16px;
+    left: -35rem;
+    top: 6rem;
   }
 
   .checkbox.sxth:checked ~ #slide li:nth-child(6) {
-    opacity: 1;
+    border-radius: 0 5px 5px 0;
     pointer-events: auto;
-    border-radius: 16px;
+    left: -35rem;
+    top: 6rem;
   }
 
+  .checkbox.svth:checked ~ #slide li:nth-child(7) {
+    border-radius: 0 5px 5px 0;
+    pointer-events: auto;
+    left: -35rem;
+    top: 6rem;
+  }
  
-  
   
   @media (max-width: 767px) {
     .slider-height-padding {
       padding-top: 340px;
     }
-    ul li {
+    #slide li {
       height: 300px;
       font-size: 13px;
       letter-spacing: 1px;
@@ -390,7 +386,8 @@ h1 {
     .slider-height-padding {
       padding-top: 240px;
     }
-    ul li {
+
+    #slide li {
       height: 200px;
     }
   }
@@ -406,9 +403,9 @@ h1 {
     height: 85vh;
     z-index: 1;
 }
-#contact {
+#footer {
     color: var(--second-color);
-    height: 45vh;
+    height: 10vh;
     z-index: 1;
     position: relative;
 }
@@ -426,12 +423,7 @@ h1 {
     }
 
     #name {
-        font-size: 2rem;
-        margin-left: 2rem !important;
-    }
-
-    #devop {
-        margin-left: 12.8rem !important;
+        font-size: 2rem;   
     }
 
     @keyframes typewriter-d{
@@ -439,55 +431,50 @@ h1 {
         to{width: 10.7em;}
     }
 
-    #social-media {
-        left: 2rem;
+    #navbar {
+      left:0;
+      height: 95vh;
     }
 
-    #navbar {
-        background-color: transparent;
-        position: fixed;
-    }
     .icon, .close-btn {
       display: block;
       cursor: pointer;
+      font-size: 2rem;
     }
 
     .icon {
       position: absolute;
-      right: 2rem;
+      right: 2rem; 
     }
 
     .links {
       position: absolute;
       top: 0;
-      height: 100vh;
+      height: 95vh;
       width: 100%;
       right: -120%;
       background: white;
-      flex-direction: column;
-      justify-content: center;
+      padding-top: 8rem;
       text-align: center;
+      align-items: center;
       z-index: 2;
       transition: 0.3s ease-in-out;
+      gap: 3rem;
     }
+
     .links li {
-      margin-right: 0;
-      margin-bottom: 2rem;
-      font-size: 1em;
+      font-size: 1.2em;
     }
 
     .links li a {
         color: var(--first-color);
         font-size: 1.5em;
-    }
-
-    .links li a:hover {
-        border-bottom: 1px solid var(--first-color);
+        writing-mode: horizontal-tb;
     }
 
     .close-btn {
       position: absolute;
-      top: 24px;
+      top: 3rem;
       right: -100vh;
       color: var(--first-color);
       font-size: 2em;
@@ -504,11 +491,29 @@ h1 {
         cursor: pointer;
       }
   
+      #social-media {
+        position: absolute;
+        background-color: transparent;
+        z-index: 1;
+    }
+    
+    #social-icons {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+    }
+
+    #social-icons i {
+        color: var(--first-color);
+    }
+    
     input#toggler:checked ~ .links-wrapper .links {
       right: -20%;
     }
     input#toggler:checked ~ .links-wrapper .close-btn {
-      right: 2rem;
+      right: 2.5rem;
     }
     input#toggler:checked ~ .links-wrapper .backdrop {
       display: block;
@@ -516,63 +521,56 @@ h1 {
 
 }
 
-@media screen and (max-width: 750px) {
-    #social-media {
-        left: 2rem !important;
-    }
-    
-}
 
 @media screen and (max-width: 800px) {
     html {
         font-size: 14px; 
     }
 
+    .links li {
+      font-size: 1.2em;
+    }
 
     #name {
-        font-size: 2rem;
-        margin-left: 3rem;
+        font-size: 2.5rem;
+        
     }
 
     #devop {
-        font-size: 0.9rem;
-        margin-left: 13.9rem;
+        font-size: 0.9rem;  
     }
 
     @keyframes typewriter-d{
         from{width: 0;}
-        to{width: 10.7em;}
+        to{width: 13.1em;}
     }
     
     #renata-img {
         width: 100%;
     }
+
+    #navbar {
+      margin-right: -1rem;
+    }
 }
 
 @media screen and (min-width: 800px) and (max-width:1000px) {
     html {
-        font-size: 12px; 
+        font-size: 15px; 
     }
 
     #name {
         font-size: 3rem;
-    }
-
-    #devop {
-        margin-left: 27.2rem;
     }
 }
 
 @media screen and (min-width: 1000px) and (max-width:1300px) {
     html {
-        font-size: 14px; 
+        font-size: 15px; 
     }
 
     #name {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
-    #devop {
-        margin-left: 27.2rem;
-    }
 }
