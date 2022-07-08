@@ -8,19 +8,21 @@
     --first-color: #5b4945;
     --second-color: #FC4001;
     --first-font: 'Poppins', sans-serif;
+    --second-font:  'Work Sans', sans-serif;
+    --third-font: 'Gravitas One', cursive;
     
 }
 
 html {
     scroll-behavior: smooth;
     width: 100vw;
-    height: 100%;
-    overflow-x: hidden;
-
+    height: 100vh;
 }
  
 body {
     height:100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /*--Navbar-- */
@@ -31,7 +33,7 @@ body {
     right: 0;
     background-color: transparent;
     z-index: 2;
-    padding: 3rem 0;
+    padding: 4rem 0;
 }
 
 #toggler {
@@ -49,9 +51,10 @@ body {
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 2.5rem;
+    gap: 3rem;
     justify-content: right;
     margin-right: 3rem;
+    align-items: center;
 }
   
 .links li a {
@@ -59,6 +62,7 @@ body {
     color: var(--first-color);
     font-size: 0.9em;
     font-family: var(--first-font);
+    font-weight: 300;
     letter-spacing: 0.1rem;
     writing-mode: vertical-lr;
 }
@@ -104,15 +108,34 @@ body {
 #social-icons i {
     text-decoration: none;
     color: var(--first-color);
+    font-size: 1.2em;
 }
 
 /*--hero--*/
 
 #welcome-section {
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: row;
+    background: url("renata.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  background-color: #f2f6f9;
+  opacity: 70%;
 }
 
 #empty {
@@ -165,10 +188,10 @@ body {
     z-index: 1;
     background-color: transparent;
     position: relative;
-    width: 12.8em;
+    width: 12.6em;
     color: var(--second-color);
     font-size: 1rem;
-    font-family: var(--first-font);
+    font-family: var(--second-font);
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid var(--first-color);
@@ -184,7 +207,7 @@ body {
   
 @keyframes typewriter-d{
     from{width: 0;}
-    to{width: 12.8em;}
+    to{width: 12.6em;}
 }
 
 
@@ -193,21 +216,12 @@ body {
   to{border-right-color: transparent;}
 }
 
-#renata-img {
-    object-fit: cover;
-    height: 100%;
-    width: 110%;
-    mix-blend-mode: multiply;   
-    filter:opacity(30%);
-    position: fixed;
-}
-
 svg {
   position: absolute;
-  bottom: 0;
+  left: 0;
   z-index: 1;
+  top:0;
 }
-
 
 /*About me*/
 
@@ -227,20 +241,24 @@ hr {
     background-color: white;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 h1 {
-    font-family: var(--first-font);
+    font-family: var(--second-font);
     color: var(--second-color);
     text-align: left;
-    font-size: 2rem;
-    margin: 8rem 0 6rem 2rem;
+    font-size: 2.3rem;
+    padding: 15rem 0 6rem 3rem;
     writing-mode: vertical-lr;
     text-orientation: upright;
     width: 100%;
+    font-weight: 100;
 }
 
-
+#about-me h1:first-of-type {
+  padding-top: 0rem !important;
+}
 
   
 [type="radio"]:checked,
@@ -260,19 +278,21 @@ h1 {
   background-color: var(--first-color);
   box-sizing: border-box;
   -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  transition: all 1s ease;
   border-radius: 50%;
+  transform: scale(0.7);
 }
   
 .checkbox:checked + label{
     box-shadow: 0 8px 25px 0 rgba(16,39,112,.3);
-    transform: scale(1.3);
+    transform: scale(1.2  );
     background-color: var(--second-color);
 }
   
 .slider-height-padding {
-    padding-top: 32rem;
-    padding-left: 29rem;
+    padding-top: 26rem;
+    padding-left: 28rem;
+    z-index: 1;
 }
 
 #slide {
@@ -280,18 +300,14 @@ h1 {
     top: 0;
     display: block;
     width: 100%;
-    z-index: 100;
+    z-index: 0;
     padding: 0;
     margin: 0;
-    list-style: none;
-    
+    list-style: none;  
   }
-
   
   #slide li {
     position: absolute;
-    top: 0rem;
-    left: -150%;
     width: 100%;
     display: block;
     z-index: 1;
@@ -300,74 +316,106 @@ h1 {
     font-size: 1.3em;
     letter-spacing: 2px;
     pointer-events: none;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease-in;
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 3rem;
     text-align: center;
+    opacity: 0;
+    transform: scale(-1, 1);
   }
+
 
   #slide li span {
     color: var(--second-color);
-    font-family: var(--first-font);
+    font-family: var(--second-font);
     font-weight: 400;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
   }
   
   #slide li p {
     color: var(--first-color);
-    font-size: 2em;
+    font-size: 1.7em;
     font-family: var(--first-font);
-    font-weight: 600;
     width: 65%;
+    font-weight: 500;
+    line-height: 4rem;
+  }
+
+  
+  #slide li:nth-child(1) {
+    left: -34rem;
+    top: 18rem;
+  }
+
+  #slide li:nth-child(2), #slide li:nth-child(3), #slide li:nth-child(4) {
+    left: -34rem;
+    top: 12rem;
+  }
+
+  #slide li:nth-child(5), #slide li:nth-child(6), #slide li:nth-child(7) {
+    left: -34rem;
+    top: 8rem;
   }
   
   .checkbox.frst:checked ~ #slide li:nth-child(1) {
+    transform: scale(1, 1);
+    opacity: 1;
     pointer-events: auto;
-    left: -35rem;
-    top: 16rem;
+    left: -34rem;
+    top: 18rem;
   }
+
+
   .checkbox.scnd:checked ~ #slide li:nth-child(2) {
-    border-radius: 0 5px 5px 0;
+    transform: scale(1, 1);
+    opacity: 1;
     pointer-events: auto;
-    left: -35rem;
-    top: 10rem;
+    left: -34rem;
+    top: 12rem;
   }
+
+
   .checkbox.thrd:checked ~ #slide li:nth-child(3) {
-    border-radius: 0 5px 5px 0;
+    transform: scale(1, 1);
+    opacity: 1;
     pointer-events: auto;
-    left: -35rem;
-    top: 10rem;
+    left: -34rem;
+    top: 12rem;
   }
   .checkbox.foth:checked ~ #slide li:nth-child(4) {
-    border-radius: 0 5px 5px 0;
+    transform: scale(1, 1);
+    opacity: 1;
     pointer-events: auto;
-    left: -35rem;
-    top: 10rem;
+    left: -34rem;
+    top: 12rem;
   }
   
   .checkbox.fith:checked ~ #slide li:nth-child(5) {
-    border-radius: 0 5px 5px 0;
+    transform: scale(1, 1);
+    opacity: 1;
     pointer-events: auto;
-    left: -35rem;
-    top: 6rem;
+    left: -34rem;
+    top: 8rem;
   }
 
   .checkbox.sxth:checked ~ #slide li:nth-child(6) {
-    border-radius: 0 5px 5px 0;
+    transform: scale(1, 1);
+    opacity: 1;
     pointer-events: auto;
-    left: -35rem;
-    top: 6rem;
+    left: -34rem;
+    top: 8rem;
   }
 
   .checkbox.svth:checked ~ #slide li:nth-child(7) {
-    border-radius: 0 5px 5px 0;
+    transform: scale(1, 1);
+    opacity: 1;
     pointer-events: auto;
-    left: -35rem;
-    top: 6rem;
+    left: -33.5rem;
+    top: 8rem;
   }
  
   
@@ -394,14 +442,17 @@ h1 {
 
 #skills {
     position: relative;
-    height: 85vh;
+    height: 100vh;
     z-index: 1;
+    background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);
 }
+
 
 #projects {
     position: relative;
-    height: 85vh;
+    height: 100vh;
     z-index: 1;
+    background: linear-gradient(180deg, #f2f6f9 0%, #fff 100%);
 }
 #footer {
     color: var(--second-color);
@@ -409,9 +460,6 @@ h1 {
     z-index: 1;
     position: relative;
 }
-
-
-
 
 
 
@@ -446,6 +494,26 @@ h1 {
       position: absolute;
       right: 2rem; 
     }
+
+    #about-me {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #about-timeline {
+      display: flex;
+      flex-direction: row;
+    }
+
+    h1 {
+      writing-mode: horizontal-tb;
+      text-orientation: sideways;
+    }
+
+    .checkbox:checked + label,
+.checkbox:not(:checked) + label{
+  display: block;
+}
 
     .links {
       position: absolute;
