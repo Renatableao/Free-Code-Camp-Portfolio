@@ -14,16 +14,18 @@
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
     <script src="https://kit.fontawesome.com/81c2c05f29.js" crossorigin="anonymous"></script>
+
+   
 </head>
 
 <body>
+    <!--Navigation Bar-->
     <nav id="navbar" class="navbar">
         <label for="toggler" class="icon"><i class="fas fa-bars"></i></label>
         <input type="checkbox" id="toggler" />
         <div class="links-wrapper active">
-        <div class="backdrop"></div>
-        <label for="toggler" class="close-btn"><i class="fas fa-times"></i></label>
-        
+            <div class="backdrop"></div>
+            <label for="toggler" class="close-btn"><i class="fas fa-times"></i></label>
             <ul class="links">
                 <li><a href="#welcome-section">Welcome!</a></li>
                 <li><a href="#about-me">About me</a></li>
@@ -39,95 +41,96 @@
         </div>
     </nav>
     
-
+    <!--Hero Section-->
     <section id="welcome-section">
         <div id="overlay"></div> 
         <div id="empty"></div>
         <div id="hero">
             <p class="name-typewriter" id="name">I'm Renata Barcelos</p>
             <p class="devop-typewriter" id="devop">Developer Apprentice</p>
-        </div>
-    </div>
-      
-        </section>
+        </div>        
+    </section>
 
     <section id="about-me">
-        
+        <!--Section Title-->
         <div>
-        <h1>About me</h1>
-        <hr width="400px"/>
+            <h1>About me</h1>
+            <hr width="300px"/>
         </div>
-        <div>
-        <div id="about-timeline">
-            <div class="section mx-auto text-center slider-height-padding">
-                <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked/>
-                <label for="slide-1"></label>
-                <input class="checkbox scnd" type="radio" name="slider" id="slider-2"/>
-                <label for="slider-2"></label>
-                <input class="checkbox thrd" type="radio" name="slider" id="slider-3"/>
-                <label for="slider-3"></label>
-                <input class="checkbox foth" type="radio" name="slider" id="slider-4"/>
-                <label for="slider-4"></label>
-                <input class="checkbox fith" type="radio" name="slider" id="slider-5"/>
-                <label for="slider-5"></label>
-                <input class="checkbox sxth" type="radio" name="slider" id="slider-6"/>
-                <label for="slider-6"></label>
-                <input class="checkbox svth" type="radio" name="slider" id="slider-7"/>
-                <label for="slider-7"></label>
-                <ul id="slide">
-                    <li>
-                        <p>34 years old, brazilian, mother of two.</p>
-                    </li>
-                    <li>
-                        <span>2007 - 2010</span>
-                        <p>Lived abroad - Ireland - for 2,5 years where I learned English and had amazing experiences.</p>
-                    </li>
-                    <li>
-                        <span>2014</span>
-                        <p>Graduated at Public Administration by Fundação João Pinheiro.</p>
-                    </li>
-                    <li>
-                        <span>2015 - 2016</span>
-                        <p>Worked at Minas Gerais State Government for two years which included budgetary and financial management.</p>
-                    </li>
-                    <li>
-                        <span>2016 - 2018</span>
-                        <p>Pub & Kitchen owner experience in inventory operations, staff management, costumer service, business development and other skills that helped me grow as leader and professional.</p>
-                    </li>
-                    <li>
-                        <span>2021</span>
-                        <p>Certified in CS50's Harvard course, which included topics such as abstraction, algorithms, data structures, security, software engineering, web programming and more.</p>
-                    </li>
-                    <li>
-                        <span>2022</span>
-                        <p>Learning and building projects throught Free Code Camp such as Responsive Web Design, Javacript Algorithms, Data Analysis, Back End Development and many others.</p>
-                    </li>
-                </ul>
+
+        <!--Timeline-->
+            <div id="about-timeline">
+                    <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked/>
+                    <label for="slide-1"></label>
+                    <input class="checkbox scnd" type="radio" name="slider" id="slider-2"/>
+                    <label for="slider-2"></label>
+                    <input class="checkbox thrd" type="radio" name="slider" id="slider-3"/>
+                    <label for="slider-3"></label>
+                    <input class="checkbox foth" type="radio" name="slider" id="slider-4"/>
+                    <label for="slider-4"></label>
+                    <input class="checkbox fith" type="radio" name="slider" id="slider-5"/>
+                    <label for="slider-5"></label>
+                    <input class="checkbox sxth" type="radio" name="slider" id="slider-6"/>
+                    <label for="slider-6"></label>
+                    <input class="checkbox svth" type="radio" name="slider" id="slider-7"/>
+                    <label for="slider-7"></label>
+                    <ul id="slide">
+                        <li name="slider-1">
+                            <p>34 years old, brazilian, mother of two.</p>
+                        </li>
+                        <li name="slider-2">
+                            <span>2007 - 2010</span>
+                            <p>Lived abroad - Ireland - for 2,5 years where I learned English and had amazing experiences.</p>
+                        </li>
+                        <li name="slider-3">
+                            <span>2014</span>
+                            <p>Graduated at Public Administration by Fundação João Pinheiro.</p>
+                        </li>
+                        <li name="slider-4">
+                            <span>2015 - 2016</span>
+                            <p>Worked at Minas Gerais State Government for two years which included budgetary and financial management.</p>
+                        </li>
+                        <li name="slider-5">
+                            <span>2016 - 2018</span>
+                            <p>Pub & Kitchen owner experience in inventory operations, staff management, costumer service, business development and other skills that helped me grow as leader and professional.</p>
+                        </li>
+                        <li name="slider-6">
+                            <span>2021</span>
+                            <p>Certified in CS50's Harvard course, which included topics such as abstraction, algorithms, data structures, security, software engineering, web programming and more.</p>
+                        </li>
+                        <li name="slider-7">
+                            <span>2022</span>
+                            <p>Learning and building projects throught Free Code Camp such as Responsive Web Design, Javacript Algorithms, Data Analysis, Back End Development and many others.</p>
+                        </li>
+                    </ul>
             </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f2f6f9" fill-opacity="1" d="M0,256L80,261.3C160,267,320,277,480,266.7C640,256,800,224,960,208C1120,192,1280,192,1360,192L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        
     </section>
 
     <section id="skills">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L80,261.3C160,267,320,277,480,266.7C640,256,800,224,960,208C1120,192,1280,192,1360,192L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+        <!--SGV wave-->
+        
+        <!--Section Title-->
         <div>
         <h1>Skills</h1>
         <hr width="400px"/>
         </div>
-      
     </section>
 
     <section id="projects">
+        <!--Section Title-->
+        <div>
         <h1 class="project-title">Projects</h1>
         <hr width="400px"/>
-        <a></a>
+        </div>
 
     </section>
-    
-    <hr> 
-   <footer>
+     
+    <footer>
 
-   </footer>
+    </footer>
    
-
 
 </body>
 </html>

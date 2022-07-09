@@ -14,9 +14,9 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
+    scroll-behavior: smooth;
 }
  
 body {
@@ -60,7 +60,7 @@ body {
 .links li a {
     text-decoration: none;
     color: var(--first-color);
-    font-size: 0.9em;
+    font-size: 1em;
     font-family: var(--first-font);
     font-weight: 300;
     letter-spacing: 0.1rem;
@@ -88,14 +88,6 @@ body {
     to {
       background: transparent;
     }
-}
-
-#social-media {
-    position: absolute;
-    background-color: transparent;
-    z-index: 1;
-    right: 4rem;
-    top: 80vh;
 }
 
 #social-icons {
@@ -210,18 +202,11 @@ body {
     to{width: 12.6em;}
 }
 
-
 @keyframes blinkTextCursor-d{
   from{border-right-color: var(--second-color);}
   to{border-right-color: transparent;}
 }
 
-svg {
-  position: absolute;
-  left: 0;
-  z-index: 1;
-  top:0;
-}
 
 /*About me*/
 
@@ -241,38 +226,54 @@ hr {
     background-color: white;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 h1 {
+    position: absolute;
+    top: 10rem;
     font-family: var(--second-font);
     color: var(--second-color);
-    text-align: left;
     font-size: 2.3rem;
-    padding: 15rem 0 6rem 3rem;
+    padding-left: 3rem;
     writing-mode: vertical-lr;
     text-orientation: upright;
-    width: 100%;
     font-weight: 100;
+    height: 100%;
 }
 
-#about-me h1:first-of-type {
-  padding-top: 0rem !important;
+#about-timeline {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13rem;
 }
 
-  
+#slide {
+  position: absolute;
+  width: 100%;
+  top: 0rem;
+  left: 0rem;
+  list-style: none;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 [type="radio"]:checked,
 [type="radio"]:not(:checked){
     position: relative;
-    left: -9999px;
+    display: none;
 }
 
 .checkbox:checked + label,
 .checkbox:not(:checked) + label{
   cursor: pointer;
-  margin-right: 6px;
-  margin-left: 6px;
-  display: inline-block;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   width: 25px;
   height: 25px;
   background-color: var(--first-color);
@@ -281,6 +282,8 @@ h1 {
   transition: all 1s ease;
   border-radius: 50%;
   transform: scale(0.7);
+  display: inline-block;
+  z-index: 2;
 }
   
 .checkbox:checked + label{
@@ -288,28 +291,9 @@ h1 {
     transform: scale(1.2  );
     background-color: var(--second-color);
 }
-  
-.slider-height-padding {
-    padding-top: 26rem;
-    padding-left: 28rem;
-    z-index: 1;
-}
-
-#slide {
-    position: absolute;
-    top: 0;
-    display: block;
-    width: 100%;
-    z-index: 0;
-    padding: 0;
-    margin: 0;
-    list-style: none;  
-  }
-  
+ 
   #slide li {
     position: absolute;
-    width: 100%;
-    display: block;
     z-index: 1;
     list-style: none;
     box-sizing: border-box;
@@ -324,7 +308,8 @@ h1 {
     line-height: 3rem;
     text-align: center;
     opacity: 0;
-    transform: scale(-1, 1);
+    transform: scale(1, 1);
+    padding: 12rem;
   }
 
 
@@ -340,33 +325,32 @@ h1 {
     color: var(--first-color);
     font-size: 1.7em;
     font-family: var(--first-font);
-    width: 65%;
     font-weight: 500;
     line-height: 4rem;
   }
 
   
   #slide li:nth-child(1) {
-    left: -34rem;
-    top: 18rem;
+    top: 6rem;
+    left: 14rem;
   }
 
   #slide li:nth-child(2), #slide li:nth-child(3), #slide li:nth-child(4) {
-    left: -34rem;
-    top: 12rem;
+    top: 0rem;
+    left: 0rem;
   }
 
   #slide li:nth-child(5), #slide li:nth-child(6), #slide li:nth-child(7) {
-    left: -34rem;
-    top: 8rem;
+    top: -2rem;
+    left: 0rem;
   }
   
+
+
   .checkbox.frst:checked ~ #slide li:nth-child(1) {
     transform: scale(1, 1);
     opacity: 1;
     pointer-events: auto;
-    left: -34rem;
-    top: 18rem;
   }
 
 
@@ -374,8 +358,7 @@ h1 {
     transform: scale(1, 1);
     opacity: 1;
     pointer-events: auto;
-    left: -34rem;
-    top: 12rem;
+  
   }
 
 
@@ -383,62 +366,44 @@ h1 {
     transform: scale(1, 1);
     opacity: 1;
     pointer-events: auto;
-    left: -34rem;
-    top: 12rem;
+  
   }
   .checkbox.foth:checked ~ #slide li:nth-child(4) {
     transform: scale(1, 1);
     opacity: 1;
     pointer-events: auto;
-    left: -34rem;
-    top: 12rem;
+   
   }
   
   .checkbox.fith:checked ~ #slide li:nth-child(5) {
     transform: scale(1, 1);
     opacity: 1;
     pointer-events: auto;
-    left: -34rem;
-    top: 8rem;
+   
   }
 
   .checkbox.sxth:checked ~ #slide li:nth-child(6) {
     transform: scale(1, 1);
     opacity: 1;
     pointer-events: auto;
-    left: -34rem;
-    top: 8rem;
+  
   }
 
   .checkbox.svth:checked ~ #slide li:nth-child(7) {
     transform: scale(1, 1);
     opacity: 1;
     pointer-events: auto;
-    left: -33.5rem;
-    top: 8rem;
+   
   }
- 
-  
-  @media (max-width: 767px) {
-    .slider-height-padding {
-      padding-top: 340px;
-    }
-    #slide li {
-      height: 300px;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-  }
-  
-  @media (max-width: 575px) {
-    .slider-height-padding {
-      padding-top: 240px;
-    }
 
-    #slide li {
-      height: 200px;
-    }
-  }
+  
+svg {
+  bottom:0;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
 
 #skills {
     position: relative;
@@ -482,6 +447,7 @@ h1 {
     #navbar {
       left:0;
       height: 95vh;
+
     }
 
     .icon, .close-btn {
@@ -492,7 +458,7 @@ h1 {
 
     .icon {
       position: absolute;
-      right: 2rem; 
+      right: 3rem; 
     }
 
     #about-me {
@@ -501,19 +467,21 @@ h1 {
     }
 
     #about-timeline {
-      display: flex;
-      flex-direction: row;
+      margin-top: 30rem;
     }
-
+    
     h1 {
+      position: relative;
       writing-mode: horizontal-tb;
       text-orientation: sideways;
+      top: 0;
+      padding: 0;
+      padding-top: 4rem;
+      text-align: center;
+      height: auto;
+      font-size: 1.5em;
     }
 
-    .checkbox:checked + label,
-.checkbox:not(:checked) + label{
-  display: block;
-}
 
     .links {
       position: absolute;
@@ -576,9 +544,13 @@ h1 {
     #social-icons i {
         color: var(--first-color);
     }
+
+    hr {
+      display: block;
+    }
     
     input#toggler:checked ~ .links-wrapper .links {
-      right: -20%;
+      left: 5rem;
     }
     input#toggler:checked ~ .links-wrapper .close-btn {
       right: 2.5rem;
@@ -587,10 +559,46 @@ h1 {
       display: block;
     }
 
+    #slide li {
+      padding: 7rem;
+    }
+
+    #slide li p{
+      font-size: 1rem;
+    }
+
+    
+  #slide li span {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  #slide li p {
+    font-size: 0.9em;
+    line-height: 2rem;
+  }
+
+  
+  #slide li:nth-child(1) {
+    top: 12rem;
+    left: 0rem;
+  }
+
+  #slide li:nth-child(2), #slide li:nth-child(3), #slide li:nth-child(4) {
+    top: 10rem;
+    left: 0rem;
+  }
+
+  #slide li:nth-child(5), #slide li:nth-child(6), #slide li:nth-child(7) {
+    font-size: 0.9rem;
+    top: 10rem;
+    left: 0rem;
+  }
+
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 675px) and (max-width: 800px) {
     html {
         font-size: 14px; 
     }
@@ -618,8 +626,44 @@ h1 {
     }
 
     #navbar {
-      margin-right: -1rem;
+      margin-right: 1rem;
     }
+
+    #slide li {
+      padding: 10rem;
+    }
+
+    #slide li p{
+      font-size: 1rem;
+    }
+
+    
+  #slide li span {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  #slide li p {
+    font-size: 1em;
+    line-height: 2rem;
+  }
+
+  
+  #slide li:nth-child(1) {
+    top: 10rem;
+    left: 2rem;
+  }
+
+  #slide li:nth-child(2), #slide li:nth-child(3), #slide li:nth-child(4) {
+    top: 7rem;
+    left: 0rem;
+  }
+
+  #slide li:nth-child(5), #slide li:nth-child(6), #slide li:nth-child(7) {
+    top: 6rem;
+    left: 0rem;
+  }
+
 }
 
 @media screen and (min-width: 800px) and (max-width:1000px) {
@@ -630,6 +674,38 @@ h1 {
     #name {
         font-size: 3rem;
     }
+
+
+    #slide li {
+      padding: 14rem;
+    }
+
+    
+  #slide li span {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  #slide li p {
+    font-size: 1.5em;
+    line-height: 2rem;
+  }
+
+  
+  #slide li:nth-child(1) {
+    top: 6rem;
+    left: 0rem;
+  }
+
+  #slide li:nth-child(2), #slide li:nth-child(3), #slide li:nth-child(4) {
+    top: 2rem;
+    left: 0rem;
+  }
+
+  #slide li:nth-child(5), #slide li:nth-child(6), #slide li:nth-child(7) {
+    top: 0rem;
+    left: 0rem;
+  }
 }
 
 @media screen and (min-width: 1000px) and (max-width:1300px) {
@@ -638,7 +714,36 @@ h1 {
     }
 
     #name {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
+    #slide li {
+      padding: 14rem;
+    }
+    
+  #slide li span {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
+  
+  #slide li p {
+    font-size: 1.8em;
+    line-height: 2rem;
+  }
+
+  
+  #slide li:nth-child(1) {
+    top: 6rem;
+    left: 2rem;
+  }
+
+  #slide li:nth-child(2), #slide li:nth-child(3), #slide li:nth-child(4) {
+    top: 2rem;
+    left: 0rem;
+  }
+
+  #slide li:nth-child(5), #slide li:nth-child(6), #slide li:nth-child(7) {
+    top: 0rem;
+    left: 0rem;
+  }
 }
