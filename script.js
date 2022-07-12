@@ -13,3 +13,10 @@ function menu() {
         backdrop.classList.add('drop');
     }
 }
+
+function reveal() {
+    document.getElementById("welcome-section").style.marginTop = "0";
+    document.getElementById("name").style.opacity = "1";
+    document.getElementById("devop").style.opacity = "1";
+
+}
