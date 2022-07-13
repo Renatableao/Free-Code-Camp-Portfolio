@@ -30,7 +30,7 @@ body {
     top: 2rem;
     right: 3rem;
     transform: translate(-50%, -50%);
-    z-index: 3;
+    z-index: 4;
 }
 
 .hamburger-container input[type="checkbox"] {
@@ -48,7 +48,7 @@ body {
     height: 1.6rem;
     width: 2rem;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -100,7 +100,7 @@ body {
     background-color: white;
     width: 100vw;
     height: 0vh;
-    z-index: 2;
+    z-index: 3;
     transition: 0.6s ease-in-out;
     opacity: 0;
     display: flex;
@@ -443,13 +443,14 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #skills h1 {
   padding-top: 0 !important;
 }
 
+/*SVG*/
 #wave {
   width: 100%;
   height: 100%;
@@ -476,7 +477,7 @@ svg circle {
   height: 100%;
   fill: none;
   stroke: #5b49451e;
-  stroke-width: 5;
+  stroke-width: 3;
   stroke-linecap: round;
   transform: translate(5px, 5px);
 }
@@ -484,6 +485,7 @@ svg circle {
 svg circle:nth-child(2) {
   stroke-dasharray: 260;
   stroke-dashoffset: 260;
+  transition: all 1s;
 }
 
 
@@ -544,16 +546,6 @@ svg circle:nth-child(2) {
   border-radius: 50%;
 }
 
-.icon-set:hover {
-  animation: rotate 1s ease-in-out 1;
-}
-
-@keyframes rotate {
-  0% {transform: scale(-1,1)};
-  50% {transform: scale(-1,1)};
-  100% {transform: scale(1,1)}
-}
-
 .icon-set img {
   height: 2rem;
 }
@@ -569,8 +561,20 @@ svg circle:nth-child(2) {
   align-items: center;
   border-radius: 50%;
   z-index: 1;
+  transition: all 1s ease-in-out;
 }
 
+.icon-image:hover {
+  transform: scale(1.2);
+}
+
+#wave2 {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -10px;
+}
+
+/*--Projects--*/
 
 #projects {
     min-height: 100vh;
@@ -588,6 +592,32 @@ svg circle:nth-child(2) {
     .skills-icons {
       gap: 2rem;
     }
+
+    #skills h1{
+      padding-top: 3rem !important;
+    }
+
+}
+
+/* Style for skills icons*/
+@media screen  and (min-width: 450px) and (max-width: 490px){
+   
+   .skills-icons {
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    gap: 2rem;
+   }
+
+   #skills h1{
+    padding-top: 3rem !important;
+  }
+}
+
+/* Style for skills h1*/
+@media screen  and (min-width: 490px) and (max-width: 600px){
+
+  #skills h1{
+   padding-top: 3rem !important;
+ }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -599,8 +629,9 @@ svg circle:nth-child(2) {
   .skills-icons {
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   }
-}
 
+
+}
 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -737,6 +768,7 @@ svg circle:nth-child(2) {
     .skills-icons {
       grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
       gap: 3rem;
+      padding-top: 2rem;
     }
   }
 
@@ -754,5 +786,23 @@ svg circle:nth-child(2) {
   .skills-icons {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 3rem;
+  }
+}
+
+/* Style for skills icons*/
+@media screen  and (min-width: 1200px) and (max-width: 1250px){
+   
+  .skills-icons {
+   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+   gap: 3rem;
+   padding-top: 3rem !important;
+  }
+}
+
+/* Style for skills icons*/
+@media screen  and (min-width: 1300px) {
+   
+  .skills-icons {
+   padding-top: 3rem !important;
   }
 }

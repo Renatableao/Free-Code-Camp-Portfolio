@@ -43,8 +43,24 @@ function changeonscroll() {
             }
 })}}
 
+
+function changeonhover() {
+    for(let i=10; i < 19; i++) {
+
+        /*Calculation of stroke .icon-box:nth-child(i) --> stroke-dashoffset: calc(260 - (260 * % / 100));*/
+
+        const percent = ['182', '182','156','91','65','130','78','208','143'];
+        const stroke = document.getElementById(i);
+        stroke.addEventListener('mouseover', function () {
+            document.getElementById(i*10).style.strokeDashoffset = "260" })
+        stroke.addEventListener('mouseout', function () {
+            document.getElementById(i*10).style.strokeDashoffset = percent[i%10]
+})}}
+
+
 function start() {
     reveal();
     changeonscroll();
+    changeonhover();
 }
 
