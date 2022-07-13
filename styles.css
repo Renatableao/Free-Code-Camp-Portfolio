@@ -486,6 +486,7 @@ svg circle:nth-child(2) {
   stroke-dashoffset: 260;
 }
 
+
 .icon-box svg circle:nth-child(2) {
   stroke: var(--second-color);
 }
@@ -543,11 +544,21 @@ svg circle:nth-child(2) {
   border-radius: 50%;
 }
 
+.icon-set:hover {
+  animation: rotate 1s ease-in-out 1;
+}
+
+@keyframes rotate {
+  0% {transform: scale(-1,1)};
+  50% {transform: scale(-1,1)};
+  100% {transform: scale(1,1)}
+}
+
 .icon-set img {
   height: 2rem;
 }
 
-.icon-image, .icon-percent {
+.icon-image {
   position: absolute;
   top: 0;
   left: 0; 
@@ -560,9 +571,6 @@ svg circle:nth-child(2) {
   z-index: 1;
 }
 
-.icon-set:hover {
-  transform: scale(1.2);
-}
 
 #projects {
     min-height: 100vh;

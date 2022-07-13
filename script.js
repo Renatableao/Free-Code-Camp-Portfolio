@@ -47,3 +47,4 @@ function start() {
     reveal();
     changeonscroll();
 }
+
