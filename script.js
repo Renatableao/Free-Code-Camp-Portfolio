@@ -20,3 +20,30 @@ function reveal() {
     document.getElementById("devop").style.opacity = "1";
 
 }
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight/2 || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function changeonscroll() {
+    for(let i=1; i < 7; i++) {
+        const time = document.getElementById(i);
+        document.addEventListener('scroll', function () {
+            if (isInViewport(time) == true) {
+                time.style.opacity = "0.8";
+            }
+            else {
+                time.style.opacity = "0.2";
+            }
+})}}
+
+function start() {
+    reveal();
+    changeonscroll();
+}

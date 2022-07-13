@@ -23,7 +23,7 @@
 
 </head>
 
-<body onLoad="reveal()";>
+<body onLoad="start()";>
 
     <!--Navigation Bar-->
     <div class="backdrop" id="backdrop" name="backdrop"></div>
@@ -74,14 +74,13 @@
         </div>
 
         <!--Timeline https://codepen.io/krishnab/pen/OPwqbW/-->
-        <div id="timeline-box">
         <ul class="timeline">
             <!-- Item 1 -->
             <li>
               <div class="direction-r">
                 <div class="flag-wrapper">
                   <span class="hexa"></span>
-                  <span class="time-wrapper"><span class="time">2014</span></span>
+                  <span class="time-wrapper"><span class="time" id="1" name="1">2014</span></span>
                 </div>
                 <div class="desc">Graduated at Public Administration by Fundação João Pinheiro. </div>
               </div>
@@ -92,7 +91,7 @@
               <div class="direction-l">
                 <div class="flag-wrapper">
                   <span class="hexa"></span>
-                  <span class="time-wrapper"><span class="time">2015- 2016</span></span>
+                  <span class="time-wrapper"><span class="time" id="2" name="2">2015- 2016</span></span>
                 </div>
                 <div class="desc">Worked at Minas Gerais State Government for two years which included budgetary and financial management.</div>
               </div>
@@ -103,7 +102,7 @@
                 <div class="direction-r">
                   <div class="flag-wrapper">
                     <span class="hexa"></span>
-                    <span class="time-wrapper"><span class="time">2017 - 2018</span></span>
+                    <span class="time-wrapper"><span class="time" id="3" name="3">2017 - 2018</span></span>
                   </div>
                   <div class="desc">Pub & Kitchen owner experience in inventory and daily operations, staff management, costumer service, 
                     business development and other skills that helped me grow as leader and professional.</div>
@@ -115,7 +114,7 @@
                 <div class="direction-l">
                   <div class="flag-wrapper">
                     <span class="hexa"></span>
-                    <span class="time-wrapper"><span class="time">2021</span></span>
+                    <span class="time-wrapper"><span class="time" id="4" name="4">2021</span></span>
                   </div>
                   <div class="desc">Certified by CS50's Harvard course, which includes topics such as abstraction, algorithms, data structures, 
                     encapsulation, resource management, security, software engineering, and web programming.</div>
@@ -127,7 +126,7 @@
               <div class="direction-r">
                 <div class="flag-wrapper">
                   <span class="hexa"></span>
-                  <span class="time-wrapper"><span class="time">2022</span></span>
+                  <span class="time-wrapper"><span class="time" id="5" name="5">2022</span></span>
                 </div>
                 <div class="desc">Learning and building projects throught Free Code Camp such as Responsive Web Design, Javacript Algorithms, 
                     Data Visualization and Analysis, Back End Development, Scientific Computing, Relational Database and many others.</div>
@@ -139,21 +138,145 @@
                 <div class="direction-l">
                   <div class="flag-wrapper">
                     <span class="hexa"></span>
-                    <span class="time-wrapper"><span class="time">Now on...</span></span>
+                    <span class="time-wrapper"><span class="time" id="6" name="6">Now on...</span></span>
                   </div>
                   <div class="desc">34 years old, mother of two and looking forward to some more coding!</div>
                 </div>
               </li>
           </ul>
-        </div>
+          <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f2f6f9" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,122.7C480,128,600,160,720,181.3C840,203,960,213,1080,213.3C1200,213,1320,203,1380,197.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
     </section>
-
+    
     <section id="skills">
         <!--Section Title-->
         <div>
             <h1>Skills</h1>
             <hr width="300px"/>
         </div>
+
+        <!--Skills icons-->
+        <div class="container">
+            <div class="skills-icons">
+                <!--Icon 1-->
+                <div class="icon-box">
+                    <div class="icon-set">
+                        <svg>
+                            <circle cx="40" cy="40" r="40"></circle>
+                            <circle cx="40" cy="40" r="40"></circle>
+                        </svg>
+                        <div class = "icon-image">
+                            <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt ="C programming language icon"/>
+                        </div>
+                    </div>
+                    <h6>C</h6>
+                </div>
+                <!--Icon 2-->
+                <div class="icon-box">
+                    <div class="icon-set">
+                        <svg>
+                            <circle cx="40" cy="40" r="40"></circle>
+                            <circle cx="40" cy="40" r="40"></circle>
+                        </svg>
+                        <div class = "icon-image">
+                            <img src="https://img.icons8.com/color/48/000000/python--v1.png" alt ="Pyhon programming language icon"/>
+                        </div>
+                    </div>
+                    <h6>Python</h6>
+                </div>
+                <!--Icon 3-->
+                <div class="icon-box">
+                    <div class="icon-set">
+                        <svg>
+                            <circle cx="40" cy="40" r="40"></circle>
+                            <circle cx="40" cy="40" r="40"></circle>
+                        </svg>
+                        <div class = "icon-image">
+                            <img src="https://img.icons8.com/external-flat-juicy-fish/60/000000/external-sql-coding-and-development-flat-flat-juicy-fish.png" alt ="SQL icon"/>
+                        </div>
+                    </div>
+                    <h6>SQL</h6>
+                </div>
+                <!--Icon 4-->
+                <div class="icon-box">
+                    <div class="icon-set">
+                        <svg>
+                            <circle cx="40" cy="40" r="40"></circle>
+                            <circle cx="40" cy="40" r="40"></circle>
+                        </svg>
+                        <div class = "icon-image">
+                            <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt = "HTML icon"/>
+                        </div>
+                    </div>
+                    <h6>HTML</h6>
+                </div>
+                <!--Icon 5-->
+                <div class="icon-box">
+                    <div class="icon-set">
+                        <svg>
+                            <circle cx="40" cy="40" r="40"></circle>
+                            <circle cx="40" cy="40" r="40"></circle>
+                        </svg>
+                        <div class = "icon-image">
+                            <img src="https://img.icons8.com/color/48/000000/css3.png" alt ="CSS icon"/>
+                        </div>
+                    </div>
+                    <h6>CSS</h6>
+                </div>
+                <!--Icon 6-->
+                <div class="icon-box">
+                    <div class="icon-set">
+                        <svg>
+                            <circle cx="40" cy="40" r="40"></circle>
+                            <circle cx="40" cy="40" r="40"></circle>
+                        </svg>
+                        <div class = "icon-image">
+                            <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt ="JavaScript programming language icon"/>
+                        </div>
+                    </div>
+                    <h6>Javacript</h6>
+                </div>
+                <!--Icon 7-->
+                <div class="icon-box">
+                    <div class="icon-set">
+                        <svg>
+                            <circle cx="40" cy="40" r="40"></circle>
+                            <circle cx="40" cy="40" r="40"></circle>
+                        </svg>
+                        <div class = "icon-image">
+                            <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt ="Bootstrap icon"/>
+                        </div>
+                    </div>
+                    <h6>BootStrap</h6>
+                </div>
+                <!--Icon 8-->
+                <div class="icon-box">
+                    <div class="icon-set">
+                        <svg>
+                            <circle cx="40" cy="40" r="40"></circle>
+                            <circle cx="40" cy="40" r="40"></circle>
+                        </svg>
+                        <div class = "icon-image">
+                            <img src="https://img.icons8.com/color/48/000000/figma--v1.png" alt ="Figma icon"/>
+                        </div>
+                    </div>
+                    <h6>Figma</h6>
+                </div>
+                <!--Icon 9-->
+                <div class="icon-box">
+                    <div class="icon-set">
+                        <svg>
+                            <circle cx="40" cy="40" r="40"></circle>
+                            <circle cx="40" cy="40" r="40"></circle>
+                        </svg>
+                        <div class = "icon-image">
+                            <img src="https://img.icons8.com/nolan/64/flask.png" alt="Flask icon">
+                        </div>
+                    </div>
+                    <h6>Flask</h6>
+                </div> 
+            </div>
+        </div>
+        <div></div>
     </section>
     
     <section id="projects">
