@@ -640,6 +640,7 @@ svg circle:nth-child(2) {
 #projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  padding: 3rem 0 4rem 0;
 }
 
 #projects {
@@ -648,7 +649,7 @@ svg circle:nth-child(2) {
 }
 
 .slider{
-  margin:4rem auto;
+  margin:3rem auto;
   width: 28rem;
   height: 20rem;
   overflow:hidden;
@@ -963,7 +964,6 @@ transform: scale(1.3);
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 3rem 0;
   }
-
 }
 
 /* Style for skills icons*/
@@ -971,6 +971,5 @@ transform: scale(1.3);
    
   .skills-icons {
    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-   gap: 3rem 0;
   }
 }
