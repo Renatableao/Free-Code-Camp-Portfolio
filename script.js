@@ -2,22 +2,22 @@ function menu() {
     const navbar = document.getElementById("navbar");
     const navlist = document.getElementById("nav-links");
     const backdrop = document.getElementById("backdrop");
-    if (navbar.classList.contains("open")) {
-        navbar.classList.remove("open");
-        navlist.classList.remove("show");
-        backdrop.classList.remove('drop');
+    if (navbar.classList.contains("opennav")) {
+        navbar.classList.remove("opennav");
+        navlist.classList.remove("shownavlist");
+        backdrop.classList.remove('opendrop');
     }
     else {
-        navbar.classList.add("open");
-        navlist.classList.add("show");
-        backdrop.classList.add('drop');
+        navbar.classList.add("opennav");
+        navlist.classList.add("shownavlist");
+        backdrop.classList.add('opendrop');
     }
 }
 
 function reveal() {
     document.getElementById("welcome-section").style.marginTop = "0";
     document.getElementById("name").style.opacity = "1";
-    document.getElementById("devop").style.opacity = "1";
+    document.getElementById("occupation").style.opacity = "1";
 
 }
 
@@ -42,8 +42,8 @@ function isInBottomViewport(el) {
 }
 
 function changeonscroll() {
-    for(let i=1; i < 7; i++) {
-        const time = document.getElementById(i);
+    const times = document.getElementsByClassName("time");
+    for (const time of times) {
         document.addEventListener('scroll', function () {
             if (isInMiddleViewport(time)) {
                 time.style.opacity = "0.8";
@@ -55,24 +55,25 @@ function changeonscroll() {
 
 
 function changeonhover() {
-    for(let i=10; i < 19; i++) {
-
+    
+    
+    for (let i=1; i<10; i++) {
+        document.addEventListener('scroll', function () {
+        const sets = document.getElementsByClassName("icon-set");
         /*Calculation of stroke percent: .icon-box:nth-child(i) --> stroke-dashoffset: calc(260 - (260 * % / 100));*/
         const percent = ['182', '182','156','118','93','130','93','208','143'];
-        const classes = ["dot20", "dot22", "dot24", "dot26", "dot28", "dot30", "dot32", "dot34", "dot36"];
-        const stroke = document.getElementById(i);
-        document.addEventListener('scroll', function () {
-            if (isInBottomViewport(stroke)) {
-                document.getElementById(i*10).style.strokeDashoffset = percent[i%10]; 
-                document.getElementById(i*2).classList.add(classes[i%10]);
-                
-            }
-            else {
-                document.getElementById(i*10).style.strokeDashoffset = "260";
-                document.getElementById(i*2).classList.remove(classes[i%10]);
-            }
+        const classes = ["dot1", "dot2", "dot3", "dot4", "dot5", "dot6", "dot7", "dot8", "dot9"];
+                if (isInBottomViewport(sets[i-1])) 
+                {
+                    document.getElementById(i*10).style.strokeDashoffset = percent[i-1]; 
+                    document.getElementById(i).classList.add(classes[i-1]);
+                }
+                else 
+                {
+                    document.getElementById(i*10).style.strokeDashoffset = "260";
+                    document.getElementById(i).classList.remove(classes[i-1]);
+                }
 })}}
-
 
 function start() {
     reveal();

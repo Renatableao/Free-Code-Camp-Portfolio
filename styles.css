@@ -109,7 +109,7 @@ body {
     border-radius: 0 0 10px 10px;
 }
 
-.open {
+.opennav{
     opacity: 1 !important;
     height: 90vh !important;
 }
@@ -124,7 +124,7 @@ body {
     font-size: 0em;
 }
 
-.show {
+.shownavlist {
     font-size: 1.8em !important;
 }
 
@@ -168,7 +168,7 @@ body {
     z-index: 1;
 }
 
-.drop {
+.opendrop {
     display: block;
 }
 
@@ -224,6 +224,7 @@ hr {
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
+    min-height: 100vh;
 }
 
 #hero div {
@@ -245,7 +246,7 @@ hr {
 }
  
 
-#devop{
+#occupation{
     font-size: 1.2em;
     color: var(--second-color);
     font-weight: 400;
@@ -410,7 +411,7 @@ section {
     transition: all 0.5s linear;
   }
   
-  .desc {
+  .description {
     position: relative;
     margin: 1em 0 0 0;
     padding: 1em;
@@ -425,7 +426,7 @@ section {
     letter-spacing: 0.1em;
   }
 
-  .desc:hover {
+  .description:hover {
     transform: scale(1.1);
   }
   
@@ -578,39 +579,39 @@ svg circle:nth-child(2) {
 }
 
 
-.dot20 {
+.dot1 {
   transform: rotate(calc(3.6deg * 30));
 }
 
-.dot22 {
+.dot2 {
   transform: rotate(calc(3.6deg * 30));
 }
 
-.dot24 {
+.dot3 {
   transform: rotate(calc(3.6deg * 40));
 }
 
-.dot26 {
+.dot4 {
   transform: rotate(calc(3.6deg * 55));
 }
 
-.dot28 {
+.dot5 {
   transform: rotate(calc(3.6deg * 65));
 }
 
-.dot30 {
+.dot6 {
   transform: rotate(calc(3.6deg * 50));
 }
 
-.dot32 {
+.dot7{
   transform: rotate(calc(3.6deg * 65));
 }
 
-.dot34 {
+.dot8 {
   transform: rotate(calc(3.6deg * 20));
 }
 
-.dot36 {
+.dot9 {
   transform: rotate(calc(3.6deg * 45));
 }
 
@@ -636,11 +637,139 @@ svg circle:nth-child(2) {
 
 /*--Projects--*/
 
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+}
+
 #projects {
     min-height: 100vh;
     width: 100%;
 }
 
+.slider{
+  margin:4rem auto;
+  width: 28rem;
+  height: 20rem;
+  overflow:hidden;
+  position:relative;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 10px;
+}
+
+.photo{
+  position:absolute;
+  animation:round 12s infinite;
+  opacity:0;
+  margin-left: -0.5rem;
+ 
+}
+
+
+
+@keyframes round{   
+  25%{
+    opacity:1;
+  }
+  40%{
+    opacity:0;
+  }
+} 
+   
+  img:nth-child(2){
+    animation-delay:3s
+  }
+
+  img:nth-child(3){
+    animation-delay:6s
+  }
+
+  img:nth-child(4){
+    animation-delay:9s
+  }
+
+#overphoto {
+  position: absolute;
+  background-color: #f2f6f9;
+  opacity: 80%;
+  z-index: 1;
+  height: 30%;
+  width: 100%;
+  bottom:0;
+  color: var(--second-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#overphoto:hover {
+  display: none;
+}
+
+.tech-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.tech-list li {
+  font-size: 0.6em;
+  list-style-type: square;
+  list-style-position: outside;
+}
+
+.tech-list span {
+  position: relative;
+  left: -5px;
+}
+
+/*---Footer---*/
+footer {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  padding: 0em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-color);
+
+}
+
+footer h2 {
+  font-style: normal;
+  color: white;
+  margin-right: 1em;
+  font-size: 1em;
+}
+
+#footer-social-icons {
+  list-style: none;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+  
+#footer-social-icons i {
+  color: white;
+}
+
+#footer-social-icons li{
+transition: all 0.2s linear;
+}
+
+#footer-social-icons li:hover {
+transform: scale(1.3);
+}
 
 /* Extra small devices*/
 @media screen  and (max-width: 450px) {
@@ -777,8 +906,9 @@ svg circle:nth-child(2) {
     }
 
     .skills-icons {
-      gap: 2rem;
+      gap: 3rem 2rem;
     }
+
   }
   
 
@@ -815,7 +945,7 @@ svg circle:nth-child(2) {
 
     .skills-icons {
       grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-      gap: 3rem;
+      gap: 3rem 2rem;
     }
   }
 
@@ -831,8 +961,9 @@ svg circle:nth-child(2) {
 
   .skills-icons {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: 3rem;
+    gap: 3rem 0;
   }
+
 }
 
 /* Style for skills icons*/
@@ -840,6 +971,6 @@ svg circle:nth-child(2) {
    
   .skills-icons {
    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-   gap: 3rem;
+   gap: 3rem 0;
   }
 }
