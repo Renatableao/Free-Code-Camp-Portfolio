@@ -21,7 +21,7 @@ function reveal() {
 
 }
 
-function isInViewport(el) {
+function isInMiddleViewport(el) {
     const rect = el.getBoundingClientRect();
     return (
         rect.top >= 0 &&
@@ -31,11 +31,21 @@ function isInViewport(el) {
     );
 }
 
+function isInBottomViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight/1.2 || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
 function changeonscroll() {
     for(let i=1; i < 7; i++) {
         const time = document.getElementById(i);
         document.addEventListener('scroll', function () {
-            if (isInViewport(time) == true) {
+            if (isInMiddleViewport(time)) {
                 time.style.opacity = "0.8";
             }
             else {
@@ -47,14 +57,20 @@ function changeonscroll() {
 function changeonhover() {
     for(let i=10; i < 19; i++) {
 
-        /*Calculation of stroke .icon-box:nth-child(i) --> stroke-dashoffset: calc(260 - (260 * % / 100));*/
-
-        const percent = ['182', '182','156','91','65','130','78','208','143'];
+        /*Calculation of stroke percent: .icon-box:nth-child(i) --> stroke-dashoffset: calc(260 - (260 * % / 100));*/
+        const percent = ['182', '182','156','118','93','130','93','208','143'];
+        const classes = ["dot20", "dot22", "dot24", "dot26", "dot28", "dot30", "dot32", "dot34", "dot36"];
         const stroke = document.getElementById(i);
-        stroke.addEventListener('mouseover', function () {
-            document.getElementById(i*10).style.strokeDashoffset = "260" })
-        stroke.addEventListener('mouseout', function () {
-            document.getElementById(i*10).style.strokeDashoffset = percent[i%10]
+        document.addEventListener('scroll', function () {
+            if (isInBottomViewport(stroke)) {
+                document.getElementById(i*10).style.strokeDashoffset = percent[i%10]; 
+                document.getElementById(i*2).classList.add(classes[i%10]);
+                
+            }
+            else {
+                document.getElementById(i*10).style.strokeDashoffset = "260";
+                document.getElementById(i*2).classList.remove(classes[i%10]);
+            }
 })}}
 
 
