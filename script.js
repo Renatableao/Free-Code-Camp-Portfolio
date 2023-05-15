@@ -61,7 +61,7 @@ function changeonhover() {
         document.addEventListener('scroll', function () {
         const sets = document.getElementsByClassName("icon-set");
         /*Calculation of stroke percent: .icon-box:nth-child(i) --> stroke-dashoffset: calc(260 - (260 * % / 100));*/
-        const percent = ['182', '182','156','118','93','130','93','208','143'];
+        const percent = ['60', '80','110','110','90','130','130','60','60'];
         const classes = ["dot1", "dot2", "dot3", "dot4", "dot5", "dot6", "dot7", "dot8", "dot9"];
                 if (isInBottomViewport(sets[i-1])) 
                 {

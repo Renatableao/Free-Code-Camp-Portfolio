@@ -1,406 +1,633 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Renata Barcelos</title>
 
     <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Quattrocento:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
-    <script src="https://kit.fontawesome.com/81c2c05f29.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/81c2c05f29.js"
+      crossorigin="anonymous"
+    ></script>
 
-   <!-- Javascript -->
-   <script type="text/javascript" src="script.js" async></script>
+    <!-- Javascript -->
+    <script type="text/javascript" src="script.js" async></script>
+  </head>
 
-</head>
-
-<body onLoad="start()";>
-
+  <body onLoad="start()" ;>
     <header>
-        <!--Navigation Bar-->
-        <div class="backdrop" id="backdrop" name="backdrop"></div>
-        <div class="nav-hamburger">
-            <div class="hamburger-container container">
-                <input type="checkbox" name="checkbox" id="checkbox" onclick="menu()">
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
-                </div>
-            </div>
+      <!--Navigation Bar-->
+      <div class="backdrop" id="backdrop" name="backdrop"></div>
+      <div class="nav-hamburger">
+        <div class="hamburger-container container">
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            onclick="menu()"
+          />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
         </div>
-        <nav id="navbar" name="navbar" class="">
-            <ul class="nav-links" id="nav-links" name="nav-links" class="">
-                <li><a href="#welcome-section">Welcome!</a></li>
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <ul id="social-icons">
-                    <li><a target="_blank" id="profile-link" href="https://github.com/Renatableao"><i class="bi bi-github"></i></a></li>
-                    <li><a target="_blank" href="www.linkedin.com/in/renatabarc"><i class="bi bi-linkedin"></i></a></li>
-                    <li><a target="_blank" href="https://www.instagram.com/renatableao/"><i class="bi bi-instagram"></i></a></li>
-                    <li><a target="_blank" href="mailto:renatab_leao@yahoo.com.br"><i class="bi bi-envelope"></i></a></li>
-                </ul>
-            </ul>
-        </nav>
+      </div>
+      <nav id="navbar" name="navbar" class="">
+        <ul class="nav-links" id="nav-links" name="nav-links" class="">
+          <li><a href="#welcome-section">Welcome!</a></li>
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <ul id="social-icons">
+            <li>
+              <a
+                target="_blank"
+                id="profile-link"
+                href="https://github.com/Renatableao"
+                ><i class="bi bi-github"></i
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" href="www.linkedin.com/in/renatabarc"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.instagram.com/renatableao/"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" href="mailto:renatab_leao@yahoo.com.br"
+                ><i class="bi bi-envelope"></i
+              ></a>
+            </li>
+          </ul>
+        </ul>
+      </nav>
     </header>
-    
+
     <main>
-    <!--Hero Section-->
-        <section id="welcome-section">
-            <div id="overlay"></div> 
-            <div id="hero">
-                <div>
-                    <p id="name">Renata Barcelos</p>
-                    <p id="occupation">Developer Apprentice</p>
+      <!--Hero Section-->
+      <section id="welcome-section">
+        <div id="overlay"></div>
+        <div id="hero">
+          <div>
+            <p id="name">Renata Barcelos</p>
+            <p id="occupation">Python Junior Developer</p>
+          </div>
+          <div></div>
+        </div>
+      </section>
+
+      <section id="about-me">
+        <!--Section Title-->
+        <div>
+          <h1>About me</h1>
+          <hr width="300px" />
+        </div>
+
+        <!--Timeline https://codepen.io/krishnab/pen/OPwqbW/-->
+        <ul class="timeline">
+          <!-- Item 1 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"><span class="time">2014</span></span>
+              </div>
+              <div class="description">
+                Graduated at Public Administration by Fundação João Pinheiro.
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 2 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"
+                  ><span class="time">2015- 2016</span></span
+                >
+              </div>
+              <div class="description">
+                Worked at Minas Gerais State Government for two years which
+                included budgetary and financial management.
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 3 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"
+                  ><span class="time">2017 - 2018</span></span
+                >
+              </div>
+              <div class="description">
+                Pub & Kitchen owner experience in inventory and daily
+                operations, staff management, costumer service, business
+                development and other skills that helped me grow as leader and
+                professional.
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 4 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"><span class="time">2021</span></span>
+              </div>
+              <div class="description">
+                Certified by CS50's Harvard course, which includes topics such
+                as abstraction, algorithms, data structures, encapsulation,
+                resource management, security, software engineering, and web
+                programming.
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 5 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"><span class="time">2022</span></span>
+              </div>
+              <div class="description">
+                Certified by Free Code Camp in several topics such as
+                Responsive Web Design, Javacript Algorithms, Data Visualization
+                and Analysis, Back End Development, Scientific Computing,
+                Relational Database and others.
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 6 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"><span class="time">2023</span></span>
+              </div>
+              <div class="description">
+                Certified by CS50's Python Harvard course which covered
+                functions, arguments, variables and types; conditionals and
+                Boolean expressions; how to handle exceptions, find and
+                fix bugs, and write unit tests; use third-party libraries;
+                validate and extract data with regular expressions; model
+                real-world entities with classes, objects, methods, and
+                properties; read and write files; among others.
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 7 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"
+                  ><span class="time">Now on...</span></span
+                >
+              </div>
+              <div class="description">
+                35 years old, mother of two and looking forward to some more
+                coding!
+              </div>
+            </div>
+          </li>
+        </ul>
+        <svg
+          id="wave"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
+          <path
+            fill="#f2f6f9"
+            fill-opacity="1"
+            d="M0,160L60,149.3C120,139,240,117,360,122.7C480,128,600,160,720,181.3C840,203,960,213,1080,213.3C1200,213,1320,203,1380,197.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </svg>
+      </section>
+
+      <section id="skills">
+        <!--Section Title-->
+        <div>
+          <h1>Skills</h1>
+          <hr width="300px" />
+        </div>
+
+        <!--Skills icons-->
+        <div class="container">
+          <div class="skills-icons">
+            <!--Icon 0-->
+            <div class="icon-box">
+              <div class="icon-set">
+                <div class="dot" id="1"></div>
+                <svg>
+                  <circle cx="40" cy="40" r="40"></circle>
+                  <circle id="10" cx="40" cy="40" r="40"></circle>
+                </svg>
+                <div class="icon-image">
+                  <img
+                    src="https://img.icons8.com/color/48/000000/python--v1.png"
+                    alt="Pyhon programming language icon"
+                  />
                 </div>
-                <div></div>
+              </div>
+              <h6>Python</h6>
             </div>
-        </section>
-
-
-        <section id="about-me">
-            <!--Section Title-->
-            <div>
-                <h1>About me</h1>
-                <hr width="300px"/>
-            </div>
-
-            <!--Timeline https://codepen.io/krishnab/pen/OPwqbW/-->
-            <ul class="timeline">
-                <!-- Item 1 -->
-                <li>
-                <div class="direction-r">
-                    <div class="flag-wrapper">
-                    <span class="hexa"></span>
-                    <span class="time-wrapper"><span class="time">2014</span></span>
-                    </div>
-                    <div class="description">Graduated at Public Administration by Fundação João Pinheiro. </div>
+                        
+            <!--Icon 2-->
+            <div class="icon-box">
+              <div class="icon-set">
+                <div class="dot" id="2"></div>
+                <svg>
+                  <circle cx="40" cy="40" r="40"></circle>
+                  <circle id="20" cx="40" cy="40" r="40"></circle>
+                </svg>
+                <div class="icon-image">
+                  <img
+                    src="https://img.icons8.com/external-flat-juicy-fish/60/000000/external-sql-coding-and-development-flat-flat-juicy-fish.png"
+                    alt="SQL icon"
+                  />
                 </div>
-                </li>
-            
-                <!-- Item 2 -->
-                <li>
-                <div class="direction-l">
-                    <div class="flag-wrapper">
-                    <span class="hexa"></span>
-                    <span class="time-wrapper"><span class="time">2015- 2016</span></span>
-                    </div>
-                    <div class="description">Worked at Minas Gerais State Government for two years which included budgetary and financial management.</div>
+              </div>
+              <h6>SQL</h6>
+            </div>
+            <!--Icon 3-->
+            <div class="icon-box">
+              <div class="icon-set">
+                <div class="dot" id="3"></div>
+                <svg>
+                  <circle cx="40" cy="40" r="40"></circle>
+                  <circle id="30" cx="40" cy="40" r="40"></circle>
+                </svg>
+                <div class="icon-image">
+                  <img
+                    src="https://img.icons8.com/color/48/000000/html-5--v1.png"
+                    alt="HTML icon"
+                  />
                 </div>
-                </li>
-            
-                <!-- Item 3 -->
-                <li>
-                    <div class="direction-r">
-                    <div class="flag-wrapper">
-                        <span class="hexa"></span>
-                        <span class="time-wrapper"><span class="time">2017 - 2018</span></span>
-                    </div>
-                    <div class="description">Pub & Kitchen owner experience in inventory and daily operations, staff management, costumer service, 
-                        business development and other skills that helped me grow as leader and professional.</div>
-                    </div>
-                </li>
-            
-                <!-- Item 4 -->
-                <li>
-                    <div class="direction-l">
-                    <div class="flag-wrapper">
-                        <span class="hexa"></span>
-                        <span class="time-wrapper"><span class="time">2021</span></span>
-                    </div>
-                    <div class="description">Certified by CS50's Harvard course, which includes topics such as abstraction, algorithms, data structures, 
-                        encapsulation, resource management, security, software engineering, and web programming.</div>
-                    </div>
-                </li>
-
-                <!-- Item 5 -->
-                <li>
-                <div class="direction-r">
-                    <div class="flag-wrapper">
-                    <span class="hexa"></span>
-                    <span class="time-wrapper"><span class="time">2022</span></span>
-                    </div>
-                    <div class="description">Learning and building projects throught Free Code Camp such as Responsive Web Design, Javacript Algorithms, 
-                        Data Visualization and Analysis, Back End Development, Scientific Computing, Relational Database and many others.</div>
+              </div>
+              <h6>HTML</h6>
+            </div>
+            <!--Icon 4-->
+            <div class="icon-box">
+              <div class="icon-set">
+                <div class="dot" id="4"></div>
+                <svg>
+                  <circle cx="40" cy="40" r="40"></circle>
+                  <circle id="40" cx="40" cy="40" r="40"></circle>
+                </svg>
+                <div class="icon-image">
+                  <img
+                    src="https://img.icons8.com/color/48/000000/css3.png"
+                    alt="CSS icon"
+                  />
                 </div>
-                </li>
-
-                <!-- Item 6 -->
-                <li>
-                    <div class="direction-l">
-                    <div class="flag-wrapper">
-                        <span class="hexa"></span>
-                        <span class="time-wrapper"><span class="time">Now on...</span></span>
-                    </div>
-                    <div class="description">34 years old, mother of two and looking forward to some more coding!</div>
-                    </div>
-                </li>
-            </ul>
-            <svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f2f6f9" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,122.7C480,128,600,160,720,181.3C840,203,960,213,1080,213.3C1200,213,1320,203,1380,197.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-        </section>
-        
-        <section id="skills">
-            <!--Section Title-->
-            <div>
-                <h1>Skills</h1>
-                <hr width="300px"/>
+              </div>
+              <h6>CSS</h6>
             </div>
-
-            <!--Skills icons-->
-            <div class="container">
-                <div class="skills-icons">
-                    
-                    <!--Icon 0-->
-                    <div class="icon-box">
-                        <div class="icon-set">
-                            <div class="dot" id="1"></div>
-                            <svg>
-                                <circle cx="40" cy="40" r="40"></circle>
-                                <circle id="10" cx="40" cy="40" r="40"></circle>
-                            </svg>
-                            <div class = "icon-image">
-                                <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt ="C programming language icon"/>
-                            </div>
-                        </div>
-                        <h6>C</h6>
-                    </div>
-                    <!--Icon 2-->
-                    <div class="icon-box">
-                        <div class="icon-set">
-                            <div class="dot" id="2"></div>
-                            <svg>
-                                <circle cx="40" cy="40" r="40"></circle>
-                                <circle id="20" cx="40" cy="40" r="40"></circle>
-                            </svg>
-                            <div class = "icon-image">
-                                <img src="https://img.icons8.com/color/48/000000/python--v1.png" alt ="Pyhon programming language icon"/>
-                            </div>
-                        </div>
-                        <h6>Python</h6>
-                    </div>
-                    <!--Icon 3-->
-                    <div class="icon-box">
-                        <div class="icon-set">
-                            <div class="dot" id="3"></div>
-                            <svg>
-                                <circle cx="40" cy="40" r="40"></circle>
-                                <circle id="30" cx="40" cy="40" r="40"></circle>
-                            </svg>
-                            <div class = "icon-image">
-                                <img src="https://img.icons8.com/external-flat-juicy-fish/60/000000/external-sql-coding-and-development-flat-flat-juicy-fish.png" alt ="SQL icon"/>
-                            </div>
-                        </div>
-                        <h6>SQL</h6>
-                    </div>
-                    <!--Icon 4-->
-                    <div class="icon-box">
-                        <div class="icon-set">
-                            <div class="dot" id="4"></div>
-                            <svg>
-                                <circle cx="40" cy="40" r="40"></circle>
-                                <circle id="40" cx="40" cy="40" r="40"></circle>
-                            </svg>
-                            <div class = "icon-image">
-                                <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" alt ="HTML icon"/>
-                            </div>
-                        </div>
-                        <h6>HTML</h6>
-                    </div>
-                    <!--Icon 5-->
-                    <div class="icon-box">
-                        <div class="icon-set">
-                            <div class="dot" id="5"></div>
-                            <svg>
-                                <circle cx="40" cy="40" r="40"></circle>
-                                <circle id="50" cx="40" cy="40" r="40"></circle>
-                            </svg>
-                            <div class = "icon-image">
-                                <img src="https://img.icons8.com/color/48/000000/css3.png" alt ="CSS icon"/>
-                            </div>
-                        </div>
-                        <h6>CSS</h6>
-                    </div>
-                    <!--Icon 6-->
-                    <div class="icon-box">
-                        <div class="icon-set">
-                            <div class="dot" id="6"></div>
-                            <svg>
-                                <circle cx="40" cy="40" r="40"></circle>
-                                <circle id="60" cx="40" cy="40" r="40"></circle>
-                            </svg>
-                            <div class = "icon-image">
-                                <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt ="JavaScript programming language icon"/>
-                            </div>
-                        </div>
-                        <h6>JavaScript</h6>
-                    </div>
-                    <!--Icon 7-->
-                    <div class="icon-box">
-                        <div class="icon-set">
-                            <div class="dot" id="7"></div>
-                            <svg>
-                                <circle cx="40" cy="40" r="40"></circle>
-                                <circle id="70" cx="40" cy="40" r="40"></circle>
-                            </svg>
-                            <div class = "icon-image">
-                                <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt ="Bootstrap icon"/>
-                            </div>
-                        </div>
-                        <h6>BootStrap</h6>
-                    </div>
-                    <!--Icon 8-->
-                    <div class="icon-box">
-                        <div class="icon-set">
-                            <div class="dot" id="8"></div>
-                            <svg>
-                                <circle cx="40" cy="40" r="40"></circle>
-                                <circle id="80" cx="40" cy="40" r="40"></circle>
-                            </svg>
-                            <div class = "icon-image">
-                                <img src="https://img.icons8.com/color/48/000000/figma--v1.png" alt ="Figma icon"/>
-                            </div>
-                        </div>
-                        <h6>Figma</h6>
-                    </div>
-                    <!--Icon 9-->
-                    <div class="icon-box">
-                        <div class="icon-set">
-                            <div class="dot" id="9"></div>
-                            <svg>
-                                <circle cx="40" cy="40" r="40"></circle>
-                                <circle id="90" cx="40" cy="40" r="40"></circle>
-                            </svg>
-                            <div class = "icon-image">
-                                <img src="https://img.icons8.com/nolan/64/flask.png" alt="Flask icon">
-                            </div>
-                        </div>
-                        <h6>Flask</h6>
-                    </div> 
+            <!--Icon 5-->
+            <div class="icon-box">
+              <div class="icon-set">
+                <div class="dot" id="5"></div>
+                <svg>
+                  <circle cx="40" cy="40" r="40"></circle>
+                  <circle id="50" cx="40" cy="40" r="40"></circle>
+                </svg>
+                <div class="icon-image">
+                  <img
+                    src="https://img.icons8.com/color/48/000000/javascript--v1.png"
+                    alt="JavaScript programming language icon"
+                  />
                 </div>
+              </div>
+              <h6>JavaScript</h6>
             </div>
-            <svg id="wave2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#f2f6f9" fill-opacity="1" d="M0,224L480,288L960,224L1440,224L1440,320L960,320L480,320L0,320Z"></path>
-            </svg>
-            </section>
-        
-        <section id="projects">
-            <!--Section Title-->
-            <div>
-                <h1 class="project-title">Projects</h1>
-                <hr width="300px"/>
+            <!--Icon 6-->
+            <div class="icon-box">
+              <div class="icon-set">
+                <div class="dot" id="6"></div>
+                <svg>
+                  <circle cx="40" cy="40" r="40"></circle>
+                  <circle id="60" cx="40" cy="40" r="40"></circle>
+                </svg>
+                <div class="icon-image">
+                  <img
+                    src="https://img.icons8.com/color/48/000000/bootstrap.png"
+                    alt="Bootstrap icon"
+                  />
+                </div>
+              </div>
+              <h6>BootStrap</h6>
             </div>
-            <div id="projects-grid">
-                <div class="slider"><a href="https://financs50.herokuapp.com/" target="a_blank">
-                    <img class='photo'  src="Images/Finance1.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Finance2.PNG" alt="Project's website screenshot" />
-                    <img class='photo'  src="Images/Finance3.PNG" alt="Project's website screenshot" />
-                    <img class='photo'  src="Images/Finance4.PNG" alt="Project's website screenshot" />
-                    <div id="overphoto">
-                        <p>CS50 Finance Project</p>
-                        <ul class="tech-list">
-                            <li><span>HTML</span></li>
-                            <li><span>CSS</span></li>
-                            <li><span>Flask</span></li>
-                            <li><span>SQLite</span></li>
-                            <li><span>Python</span></li>
-                            <li><span>Jinja</span></li>
-                        </ul>
-                    </div>
-                </a></div>
-                <div class="slider"><a href="https://cs50xfinal.herokuapp.com/" target="a_blank">
-                    <img class='photo'  src="Images/Final1.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Final2.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Final3.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Final4.PNG" alt="Project's website screenshot"/>
-                    <div id="overphoto">
-                        <p>CS50 Final Project</p>
-                        <ul class="tech-list">
-                            <li><span>HTML</span></li>
-                            <li><span>CSS</span></li>
-                            <li><span>JavaScript</span></li>
-                            <li><span>Flask</span></li>
-                            <li><span>Flask Mail</span></li>
-                            <li><span>SQLite</span></li>
-                            <li><span>Python</span></li>
-                            <li><span>Jinja</span></li>
-                        </ul>   
-                    </div>
-                </a></div>
-                <div class="slider"><a href="https://renatableao.github.io/Free-Code-Camp-Survey-Form/" target="a_blank">
-                    <img class='photo'  src="Images/Form1.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Form2.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Form3.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Form4.PNG" alt="Project's website screenshot"/>
-                    <div id="overphoto">
-                        <p>FCC Survey Form</p>
-                        <ul class="tech-list">
-                            <li><span>HTML</span></li>
-                            <li><span>CSS</span></li>
-                        </ul>  
-                    </div>
-                </a></div>
-                <div class="slider"><a href="https://renatableao.github.io/Free-Code-Camp-Doc-Page/" target="a_blank">
-                    <img class='photo'  src="Images/Doc1.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Doc2.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Doc3.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Doc4.PNG" alt="Project's website screenshot"/>
-                    <div id="overphoto">
-                        <p>FCC Documentation Page</p>
-                        <ul class="tech-list">
-                            <li><span>HTML</span></li>
-                            <li><span>CSS</span></li>
-                        </ul> 
-                    </div>
-                </a></div>
-                <div class="slider"><a href="https://renatableao.github.io/Free-Code-Camp-Tribute-Page/" target="a_blank">
-                    <img class='photo'  src="Images/Tribute1.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Tribute2.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Tribute3.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Tribute4.PNG" alt="Project's website screenshot"/>
-                    <div id="overphoto">
-                        <p>FCC Tribute Page</p>
-                        <ul class="tech-list">
-                            <li><span>HTML</span></li>
-                            <li><span>CSS</span></li>
-                        </ul> 
-                    </div>
-                </a></div>
-                <div class="slider"><a href="https://renatableao.github.io/Free-Code-Camp-Product-Page/" target="a_blank">
-                    <img class='photo'  src="Images/Landing1.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Landing2.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Landing3.PNG" alt="Project's website screenshot"/>
-                    <img class='photo'  src="Images/Landing4.PNG" alt="Project's website screenshot"/>
-                    <div id="overphoto">
-                        <p>FCC Landing Page</p>
-                        <ul class="tech-list">
-                            <li><span>HTML</span></li>
-                            <li><span>CSS</span></li>
-                        </ul> 
-                    </div>
-                </a></div>
+            <!--Icon 7-->
+            <div class="icon-box">
+              <div class="icon-set">
+                <div class="dot" id="7"></div>
+                <svg>
+                  <circle cx="40" cy="40" r="40"></circle>
+                  <circle id="70" cx="40" cy="40" r="40"></circle>
+                </svg>
+                <div class="icon-image">
+                  <img
+                    src="https://img.icons8.com/color/48/000000/figma--v1.png"
+                    alt="Figma icon"
+                  />
+                </div>
+              </div>
+              <h6>Figma</h6>
             </div>
-        </section>
+            <!--Icon 8-->
+            <div class="icon-box">
+              <div class="icon-set">
+                <div class="dot" id="8"></div>
+                <svg>
+                  <circle cx="40" cy="40" r="40"></circle>
+                  <circle id="80" cx="40" cy="40" r="40"></circle>
+                </svg>
+                <div class="icon-image">
+                  <img
+                    src="https://img.icons8.com/nolan/64/flask.png"
+                    alt="Flask icon"
+                  />
+                </div>
+              </div>
+              <h6>Flask</h6>
+            </div>
+            <!--Icon 9 -->
+            <div class="icon-box">
+              <div class="icon-set">
+                <div class="dot" id="9"></div>
+                <svg>
+                  <circle cx="40" cy="40" r="40"></circle>
+                  <circle id="90" cx="40" cy="40" r="40"></circle>
+                </svg>
+                <div class="icon-image">
+                  <img
+                    src="jinja-logo.png"
+                    alt="Jinja icon"
+                  />
+                </div>
+              </div>
+              <h6>Figma</h6>
+            </div>
+          </div>
+        </div>
+        <svg
+          id="wave2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
+          <path
+            fill="#f2f6f9"
+            fill-opacity="1"
+            d="M0,224L480,288L960,224L1440,224L1440,320L960,320L480,320L0,320Z"
+          ></path>
+        </svg>
+      </section>
+
+      <section id="projects">
+        <!--Section Title-->
+        <div>
+          <h1 class="project-title">Projects</h1>
+          <hr width="300px" />
+        </div>
+        <div id="projects-grid">
+        <div class="project">
+            <a href="https://cs50-bookaseat.herokuapp.com/" target="a_blank">
+              <img
+                class="photo"
+                src="Images/BooKaseat1.PNG"
+                alt="Project's website screenshot"
+              />
+              <div id="overphoto">
+                <p>CS50 Python Final Project: Bookaseat</p>
+                <ul class="tech-list">
+                  <li><span>Python</span></li>
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                  <li><span>JavaScript</span></li>
+                  <li><span>Flask</span></li>
+                  <li><span>SQLite</span></li>
+                  <li><span>API</span></li>
+                  <li><span>Jinja</span></li>
+                  <li><span>JSON</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        <div class="project">
+            <a href="https://fcc-pomodoroclock.herokuapp.com/" target="a_blank">
+              <img
+                class="photo"
+                src="Images/Pomodoro1.png"
+                alt="Project's website screenshot"
+              />
+              <div id="overphoto">
+                <p>FCC Pomodoro Clock</p>
+                <ul class="tech-list">
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                  <li><span>Javascript</span></li>
+                  <li><span>React</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="project">
+            <a href="https://fcc-drum-pad.herokuapp.com/" target="a_blank">
+              <img
+                class="photo"
+                src="Images/Drum1.png"
+                alt="Project's website screenshot"
+              />
+              <div id="overphoto">
+                <p>FCC Drum Pad</p>
+                <ul class="tech-list">
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                  <li><span>Javascript</span></li>
+                  <li><span>React</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="project">
+            <a href="https://financs50.herokuapp.com/" target="a_blank">
+              <img
+                class="photo"
+                src="Images/Finance1.PNG"
+                alt="Project's website screenshot"
+              />
+              <div id="overphoto">
+                <p>CS50 Finance Project</p>
+                <ul class="tech-list">
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                  <li><span>Flask</span></li>
+                  <li><span>SQLite</span></li>
+                  <li><span>Python</span></li>
+                  <li><span>Jinja</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="project">
+            <a href="https://cs50xfinal.herokuapp.com/" target="a_blank">
+              <img
+                class="photo"
+                src="Images/Final1.PNG"
+                alt="Project's website screenshot"
+              />
+              <div id="overphoto">
+                <p>CS50 Final Project</p>
+                <ul class="tech-list">
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                  <li><span>JavaScript</span></li>
+                  <li><span>Flask</span></li>
+                  <li><span>Flask Mail</span></li>
+                  <li><span>SQLite</span></li>
+                  <li><span>Python</span></li>
+                  <li><span>Jinja</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="project">
+            <a
+              href="https://renatableao.github.io/Free-Code-Camp-Survey-Form/"
+              target="a_blank"
+            >
+              <img
+                class="photo"
+                src="Images/Form1.PNG"
+                alt="Project's website screenshot"
+              />
+           <div id="overphoto">
+                <p>FCC Survey Form</p>
+                <ul class="tech-list">
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="project">
+            <a
+              href="https://renatableao.github.io/Free-Code-Camp-Doc-Page/"
+              target="a_blank"
+            >
+              <img
+                class="photo"
+                src="Images/Doc1.PNG"
+                alt="Project's website screenshot"
+              />
+             <div id="overphoto">
+                <p>FCC Documentation Page</p>
+                <ul class="tech-list">
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="project">
+            <a
+              href="https://renatableao.github.io/Free-Code-Camp-Tribute-Page/"
+              target="a_blank"
+            >
+              <img
+                class="photo"
+                src="Images/Tribute1.PNG"
+                alt="Project's website screenshot"
+              />
+              <div id="overphoto">
+                <p>FCC Tribute Page</p>
+                <ul class="tech-list">
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="project">
+            <a
+              href="https://renatableao.github.io/Free-Code-Camp-Product-Page/"
+              target="a_blank"
+            >
+              <img
+                class="photo"
+                src="Images/Landing1.PNG"
+                alt="Project's website screenshot"
+              />
+              <div id="overphoto">
+                <p>FCC Landing Page</p>
+                <ul class="tech-list">
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                </ul>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <h2>Get in touch!</h2>
-        <ul id="footer-social-icons">
-            <li><a target="_blank" id="profile-link" href="https://github.com/Renatableao"><i class="bi bi-github"></i></a></li>
-            <li><a target="_blank" href="www.linkedin.com/in/renatabarc"><i class="bi bi-linkedin"></i></a></li>
-            <li><a target="_blank" href="https://www.instagram.com/renatableao/"><i class="bi bi-instagram"></i></a></li>
-            <li><a target="_blank" href="mailto:renatab_leao@yahoo.com.br"><i class="bi bi-envelope"></i></a></li>
-        </ul>
+      <h2>Get in touch!</h2>
+      <ul id="footer-social-icons">
+        <li>
+          <a
+            target="_blank"
+            id="profile-link"
+            href="https://github.com/Renatableao"
+            ><i class="bi bi-github"></i
+          ></a>
+        </li>
+        <li>
+          <a target="_blank" href="www.linkedin.com/in/renatabarc"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.instagram.com/renatableao/"
+            ><i class="bi bi-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a target="_blank" href="mailto:renatab_leao@yahoo.com.br"
+            ><i class="bi bi-envelope"></i
+          ></a>
+        </li>
+      </ul>
     </footer>
-
-</body>
+  </body>
 </html>
